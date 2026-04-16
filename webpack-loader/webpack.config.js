@@ -40,9 +40,12 @@ module.exports = {
       path: path.resolve(__dirname, 'dist')
     },
   */
-  entry: "./index.js",
+  entry: {
+    index:'./index.js',
+    explore:'./explore.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
 
     /* 

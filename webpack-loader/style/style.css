@@ -40,3 +40,7 @@ body {
 #secondImg {
   display: none; /* Hide the actual img element */
 }
+
+#exploreSection {
+  display: flex;
+}
