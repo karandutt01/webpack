@@ -40,12 +40,9 @@ module.exports = {
       path: path.resolve(__dirname, 'dist')
     },
   */
-  entry: {
-    index:'./index.js',
-    explore:'./explore.js'
-  },
+  entry: "./index.js",
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
 
     /* 
@@ -83,7 +80,7 @@ module.exports = {
          */
         test: /.(jpg|jpeg|png|gif)$/,
         /**
-         * It is a loader for processing different types of files (images)
+         * It is a loader for processing different types of files (images/fonts)
          * Specifies how the matched files will be processed.
          * 'asset/resource' emits a separate file and exports the URL.
          * @type {string}
