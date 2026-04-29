@@ -100,6 +100,7 @@ module.exports = {
     /* 
       The purpose of MiniCssExtractPlugin() in your webpack configuration is to extract CSS 
       (and optionally SCSS) from your JavaScript bundles into separate CSS files. 
+      
       Instead of having styles injected into the DOM via JavaScript (which is what style-loader does), 
       this plugin creates actual .css files in your output directory. 
       
@@ -149,6 +150,14 @@ module.exports = {
         test:/\.(css)$/i,
         use:[MiniCssExtractPlugin.loader, 'css-loader']
       },
+
+      /* 
+        css-loader: Interprets @import and url() in CSS files, 
+        resolving them so you can import CSS into your JavaScript. 
+        It turns CSS into a format webpack can understand.
+        
+        sass-loader: Compiles SCSS/Sass files into standard CSS, so you can write styles in Sass/SCSS syntax.
+      */
       {
         test:/\.(scss)$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
