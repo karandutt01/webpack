@@ -97,6 +97,20 @@ module.exports = {
       filename: 'explore.html'
     }),
 
+    /* 
+      The purpose of MiniCssExtractPlugin() in your webpack configuration is to extract CSS 
+      (and optionally SCSS) from your JavaScript bundles into separate CSS files. 
+      Instead of having styles injected into the DOM via JavaScript (which is what style-loader does), 
+      this plugin creates actual .css files in your output directory. 
+      
+      This is beneficial for production because:
+
+      It enables parallel loading of CSS and JS resources, improving page load performance.
+      CSS files can be cached separately by browsers.
+      It supports source maps and works well with CSS preprocessors like Sass.
+      In your config, it is used with css-loader and sass-loader to process .css and .scss files, then outputs them as standalone CSS files in your build.
+
+    */
     new MiniCssExtractPlugin(),
     new copyWebpackPlugin({
       patterns:[
